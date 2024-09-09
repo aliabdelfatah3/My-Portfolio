@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav {
+    @apply hover:text-sky-800 text-sky-500 font-bold py-2 px-4 rounded;
+  }
+}
+
+.active-link {
+  color: #1e40af; /* Tailwind color or any custom color */
+  font-weight: bold;
+}
+
+.inactive-link {
+  color: #6b7280; /* Tailwind color or any custom color */
+}
