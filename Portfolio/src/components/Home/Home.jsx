@@ -6,7 +6,7 @@ import AboutMe from "../About/AboutMe";
 function Home() {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/about");
+    navigate("/#projects");
   };
   return (
     <>
