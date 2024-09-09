@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import One from "./Pic/One.png"
+import Two from "./Pic/Two.png"
 function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -48,12 +50,12 @@ function AboutMe() {
         >
           <img
             className="absolute w-72 h-128"
-            src="src\components\About\Pic\1.png"
+            src={One}
             alt=""
           />
           <img
             className="relative size-60 top-60 left-44"
-            src="src\components\About\Pic\2.png"
+            src={Two}
             alt=""
           />
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTheme } from "../Context/ThemeProvider";
+import logo from "../../LogoPic/logo.png"
 
 function NavBar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -25,7 +26,7 @@ function NavBar() {
       }dark:bg-darklight`}
     >
       <Link>
-        <img className="mr-3 h-12" src="src\Pic\logo.png" alt="" />
+        <img className="mr-3 h-12" src={logo} alt="" />
       </Link>
       <label className="flex cursor-pointer">
         <input

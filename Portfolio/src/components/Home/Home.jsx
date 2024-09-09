@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Services from "../Services/Services";
 import AboutMe from "../About/AboutMe";
+import Pic1 from "./HomePic/Pic1.png";
+import Pic2 from "./HomePic/Pic2.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -20,12 +22,12 @@ function Home() {
         <div className="relative">
           <img
             className="mt-3 h-96 animate-fadeIn"
-            src="src\components\Home\HomePic\Pic1.png"
+            src={Pic1}
             alt=""
           />
           <img
             className="absolute top-36 left-16 animate-fadeIn"
-            src="src\components\Home\HomePic\Pic2.png"
+            src={Pic2}
             alt=""
           />
         </div>
