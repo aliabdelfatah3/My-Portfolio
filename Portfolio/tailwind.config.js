@@ -10,6 +10,8 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
       },
       width: {
+        100: "30rem",
+        112: "88rem",
         128: "90rem",
       },
       gap: {
@@ -22,7 +24,7 @@ export default {
         ferany: "#F8F8F8",
         whats: "#2C2C2C",
         darklight: "#231B3B",
-        services: "#483778",
+        projects: "#483778",
         lines: "#DC7FE8",
       },
       animation: {

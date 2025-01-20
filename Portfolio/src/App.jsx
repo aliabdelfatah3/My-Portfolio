@@ -2,32 +2,33 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/About/AboutMe";
-import Services from "./components/Services/Services";
-import Contact from "./components/Contact/Contacts";
+import ContactUs from "./components/ContactUs/ContactsUs";
 import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
-import { ThemeProvider } from "./components/Context/ThemeProvider";
+import { ThemeProvider } from "./components/Themes/ThemeProvider";
 import "./App.css";
+import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   useEffect(() => {
     document.title = "My Portfolio";
   }, []);
-  const [count, setCount] = useState(0);
 
   return (
-    <div className="bg-Bej dark:bg-darklight">
+    <div className="bg-Bej dark:bg-darklight h-screen">
       <ThemeProvider>
         <Router>
           <NavBar />
-          
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </ThemeProvider>
     </div>

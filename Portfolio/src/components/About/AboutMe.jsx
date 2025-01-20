@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import One from "./Pic/One.png"
-import Two from "./Pic/Two.png"
+import Ali_prof_pic from "./Pic/Ali_prof_pic.jpg";
 function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -25,63 +24,56 @@ function AboutMe() {
   }, []);
   return (
     <div className="flex flex-col justify-center text-center">
-      <div
+      {/* <div
         ref={elementRef}
         className={`transition-transform transform ${
           isVisible ? "animate-shortSlideUp" : "translate-y-10 opacity-0"
         } duration-700 ease-in-out`}
       >
-        <h1 className="font-eb-garamond text-6xl pt-20 pb-16 dark:text-white dark:font-bold">
+        <h1 className="font-eb-garamond text-6xl pt-20 pb-1 dark:text-white dark:font-bold">
           About Me
         </h1>
-      </div>
-      <hr
+      </div> */}
+      {/* <hr
         ref={elementRef}
         className={`border-black w-11/12 ml-14 transition-transform transform ${
           isVisible ? "animate-slideR" : "translate-y-10 opacity-0"
         } duration-700 ease-in-out dark:border-lines`}
-      />
-      <div className="flex flex-row items-center  ">
+      /> */}
+      <div className="flex flex-row items-center pt-32">
         <div
           ref={elementRef}
-          className={`border-r pt-10 pb-72 pl-32 border-black h-full w-1/2 transition-transform transform ${
+          className={`flex justify-center border-r pt-10 pl-48 h- border-black w-1/2 transition-transform transform ${
             isVisible ? "animate-fadeIn" : "translate-y-10 opacity-0"
           } dark:border-lines`}
         >
-          <img
-            className="absolute w-72 h-128"
-            src={One}
-            alt=""
-          />
-          <img
-            className="relative size-60 top-60 left-44"
-            src={Two}
-            alt=""
-          />
+          <img className="size-96 " src={Ali_prof_pic} alt="" />
         </div>
-        <div className={`pl-12 pb-28 w-4/12`}>
+        <div className={`pl-12 pt- pb `}>
           <h1
             ref={elementRef}
             className={`text-left text-2xl font-eb-garamond pb-10 transition-transform transform ${
               isVisible ? "animate-shortSlideUp" : "translate-y-10 opacity-0"
             } duration-700 ease-in-out dark:text-white dark:font-semibold dark:font-Montserrat`}
           >
-            Creative Developer
+            Ali Abdelfattah Saad
           </h1>
           <p
             ref={elementRef}
-            className={`font-eb-garamond font-light text-left transition-transform transform ${
+            className={`font-eb-garamond font-light text-left transition-transform transform w-100 leading-8 ${
               isVisible ? "animate-shortSlideUp" : "translate-y-10 opacity-0"
-            } duration-700 ease-in-out dark:text-white dark:font-Montserrat dark:w-80`}
+            } duration-700 ease-in-out dark:text-white dark:font-Montserrat `}
           >
-            3looloo is a portfolio of a dedicated and innovative developer,
-            specializing in creating unique digital experiences. With a focus on
-            user-centric design and cutting-edge technologies, I aim to bring
-            ideas to life and deliver impactful solutions. My expertise includes
-            web development and interactive experiences
-            that elevate brands and engage audiences.
+            Hi, I'm Ali, a front-end developer with 1+ years of experience in
+            creating responsive, user-friendly web applications. My expertise
+            includes React, JavaScript, and Tailwind CSS, and I have a solid
+            foundation in web development, built through the ALX program, where
+            I mastered advanced HTML, CSS, and ReactJS. I’m currently interning
+            at Penta-b, where I’m gaining hands-on experience in solving
+            real-world challenges, refining my problem-solving abilities, and
+            collaborating effectively in a professional environment.
           </p>
-          <button
+          {/* <button
             ref={elementRef}
             className={`font-eb-garamond bg-Org hover:bg-black hover:text-Org flex font-light text-sm rounded-full shadow-md px-10 mt-5 py-3 transition-transform transform ${
               isVisible ? "animate-shortSlideUp" : "translate-y-10 opacity-0"
@@ -90,7 +82,7 @@ function AboutMe() {
              dark:hover:bg-lines dark:hover:text-black`}
           >
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"; // Import LinkedIn and GitHub icons
-import { Link } from "react-router-dom";
 
 function SocialLinks() {
   return (
