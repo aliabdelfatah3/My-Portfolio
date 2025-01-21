@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-Bej dark:bg-darklight h-screen">
+    <div className="bg-orange-100 dark:bg-darklight h-screen">
       <ThemeProvider>
         <Router>
           <NavBar />

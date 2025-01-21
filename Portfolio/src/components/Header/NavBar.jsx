@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTheme } from "../Themes/ThemeProvider";
-import logo from "../../LogoPic/logo.png";
+import logo_transparent from "../../LogoPic/logo_transparent.png";
 import NightMode from "./Img/NightMode.png";
 import LightMode from "./Img/LightMode.png";
 
@@ -25,11 +25,9 @@ function NavBar() {
     <nav
       className={`flex bg-Bej w-full  justify-around items-center font-bold pt-3 pb-5 pl-10 sticky top-0 z-50 transition-transform duration-300 ${
         isSticky ? "-translate-y-full " : "translate-y-0 "
-      }dark:bg-darklight`}
+      }dark:bg-slate-950`}
     >
-      <Link>
-        <img className="mr-3 h-12" src={logo} alt="Logo" />
-      </Link>
+      <img className="mr-3 h-12" src={logo_transparent} alt="Logo" />
 
       <ul className="flex font-semibold font-Inter flex-row gap-12">
         <li>

@@ -28,7 +28,7 @@ export default {
         lines: "#DC7FE8",
       },
       animation: {
-        fadeIn: "fadeIn 3s ease-out forwards",
+        fadeIn: "fadeIn 1s ease-out forwards",
         slideUp: "slideUp 1s ease-in-out forwards",
         slideDown: "slideDown 1s ease-in-out forwards",
         shortSlideUp: "shortSlideUp 1s ease-out forwards",

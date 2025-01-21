@@ -18,7 +18,7 @@ function Skills() {
   return (
     <>
       <div className="w-full h-5/6 flex justify-center items-center">
-        <div className="flex items-center justify-center bg-orange-100 dark:bg-purple-950 text-center w-2/3 h-96 ">
+        <div className="flex items-center justify-center bg-Bej shadow-2xl dark:bg-purple-950 text-center w-2/3 h-96 ">
           <div className="text-center flex flex-col gap-10">
             <h1 className="text-2xl dark:text-white">Skills</h1>
             <div className="flex flex-wrap justify-center gap-16">
