@@ -10,7 +10,7 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
       },
       width: {
-        100: "30rem",
+        100: "35rem",
         112: "88rem",
         128: "90rem",
       },

@@ -64,14 +64,20 @@ function AboutMe() {
               isVisible ? "animate-shortSlideUp" : "translate-y-10 opacity-0"
             } duration-700 ease-in-out dark:text-white dark:font-Montserrat `}
           >
-            Hi, I'm Ali, a front-end developer with 1+ years of experience in
-            creating responsive, user-friendly web applications. My expertise
-            includes React, JavaScript, and Tailwind CSS, and I have a solid
-            foundation in web development, built through the ALX program, where
-            I mastered advanced HTML, CSS, and ReactJS. I’m currently interning
-            at Penta-b, where I’m gaining hands-on experience in solving
-            real-world challenges, refining my problem-solving abilities, and
-            collaborating effectively in a professional environment.
+            Hi, I'm Ali, a front-end developer with 1+ years of experience
+            crafting responsive and dynamic web applications. I specialize in
+            modern technologies, including React, JavaScript, TypeScript,
+            Tailwind CSS, Bootstrap, and Material UI (MUI), ensuring seamless
+            and user-friendly designs. My technical toolkit also includes state
+            management tools like Redux and Zustand, efficient routing with
+            React Router, and API handling with Axios and REST APIs. I'm
+            proficient in Git and GitHub for version control, and I leverage
+            Vite for fast development and Vercel for seamless deployment.
+            Additionally, I have experience with Webflow for building visually
+            stunning websites. I’m passionate about solving problems, optimizing
+            performance, and creating intuitive user interfaces that enhance the
+            web experience. Always eager to learn and adapt, I strive to deliver
+            impactful solutions through innovation and collaboration.
           </p>
           {/* <button
             ref={elementRef}
