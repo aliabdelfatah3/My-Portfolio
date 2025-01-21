@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Ali_prof_pic from "./Pic/Ali_prof_pic.jpg";
+import Ali_Prof_Pic from "./Pic/Ali_Prof_Pic.jpg";
 function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -47,7 +47,7 @@ function AboutMe() {
             isVisible ? "animate-fadeIn" : "translate-y-10 opacity-0"
           } dark:border-lines`}
         >
-          <img className="size-96 " src={Ali_prof_pic} alt="" />
+          <img className="size-96 " src={Ali_Prof_Pic} alt="" />
         </div>
         <div className={`pl-12 pt- pb `}>
           <h1
