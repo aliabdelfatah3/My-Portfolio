@@ -1,5 +1,5 @@
 import React from "react";
-import Html_logo from "./Pic/Html_logo.png";
+import HTML_logo from "./Pic/HTML_logo.png";
 import CSS_logo from "./Pic/CSS_logo.png";
 import Git_logo from "./Pic/Git_logo.png";
 import Github_logo from "./Pic/Github_logo.png";
@@ -23,8 +23,8 @@ function Skills() {
             <h1 className="text-2xl dark:text-white">Skills</h1>
             <div className="flex flex-wrap justify-center gap-16">
               <img
-                src={Html_logo}
-                alt="Html"
+                src={HTML_logo}
+                alt="HTML"
                 className="size-24 hover:scale-110 "
               />
               <img
