@@ -2,13 +2,13 @@ import React from "react";
 import HTML_logo from "./Pic/HTML_logo.png";
 import CSS_logo from "./Pic/CSS_logo.png";
 import Git_logo from "./Pic/Git_logo.png";
-import Github_logo from "./Pic/Github_logo.png";
+import GitHub_logo from "./Pic/GitHub_logo.png";
 import Bootstrap_logo from "./Pic/Bootstrap_logo.png";
-import Javascript_logo from "./Pic/Javascript_logo.png";
+import JavaScript_logo from "./Pic/JavaScript_logo.png";
 import Material_UI_logo from "./Pic/Material_UI_logo.png";
 import React_logo from "./Pic/React_logo.png";
 import Redux_logo from "./Pic/Redux_logo.png";
-import TailwindCSS_logo from "./Pic/TailwindCSS_logo.png";
+import Tailwindcss_logo from "./Pic/Tailwindcss_logo.png";
 import TypeScript_logo from "./Pic/TypeScript_logo.png";
 import Vercel_logo from "./Pic/Vercel_logo.png";
 import Vite_logo from "./Pic/Vite_logo.png";
@@ -38,8 +38,8 @@ function Skills() {
                 className="size-24 hover:scale-110"
               />
               <img
-                src={Javascript_logo}
-                alt="Javascript"
+                src={JavaScript_logo}
+                alt="JavaScript"
                 className="size-24 hover:scale-110"
               />
               <img
@@ -48,8 +48,8 @@ function Skills() {
                 className="size-24 hover:scale-110"
               />
               <img
-                src={Github_logo}
-                alt="Github"
+                src={GitHub_logo}
+                alt="GitHub"
                 className="size-24 hover:scale-110"
               />
               <img
@@ -68,7 +68,7 @@ function Skills() {
                 className="size-24 hover:scale-110"
               />
               <img
-                src={TailwindCSS_logo}
+                src={Tailwindcss_logo}
                 alt="Tailwind CSS"
                 className="size-24 hover:scale-110"
               />
