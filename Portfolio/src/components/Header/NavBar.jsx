@@ -81,6 +81,20 @@ function NavBar() {
                   : "text-sky-500 hover:text-sky-600"
               }`
             }
+            to={"/projects"}
+          >
+            Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              `${
+                isActive
+                  ? "text-sky-950 py-1 border-b-2 border-sky-950 dark:text-sky-200 dark:border-sky-200"
+                  : "text-sky-500 hover:text-sky-600"
+              }`
+            }
             to={"/skills"}
           >
             Skills
