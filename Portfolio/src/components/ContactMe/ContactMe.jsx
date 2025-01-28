@@ -41,14 +41,18 @@ function ContactMe() {
                 alt="Phone_Lightmode"
                 className="dark:hidden size-7"
               />
-              <span className="font-semibold">01011624638</span>
+              <span className="font-semibold hover:underline">
+                +20 101 162 4638
+              </span>
             </a>
             <a
               href="mailto:aliabdelfatah455@gmail.com"
               className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
             >
               <img src={Gmail} alt="Gmail" className="size-7" />
-              <span className="font-semibold">aliabdelfatah455@gmail.com</span>
+              <span className="font-semibold hover:underline">
+                aliabdelfatah455@gmail.com
+              </span>
             </a>
             <a
               href="https://github.com/aliabdelfatah3"
@@ -64,7 +68,7 @@ function ContactMe() {
                 alt="Github_Lightmode"
                 className="dark:hidden size-7"
               />
-              <span className="font-semibold">GitHub</span>
+              <span className="font-semibold hover:underline">GitHub</span>
             </a>
             <a
               href="https://www.linkedin.com/in/ali-abdelfattah-3looloo-866b91198"
@@ -80,7 +84,7 @@ function ContactMe() {
                 alt="LinkedIn_Lightmode"
                 className="dark:hidden size-7"
               />
-              <span className="font-semibold">LinkedIn</span>
+              <span className="font-semibold hover:underline">LinkedIn</span>
             </a>
           </div>
         </div>
