@@ -1,7 +1,8 @@
 import React from "react";
 import Phone_Darkmode from "./Logos/Phone_Darkmode.png";
 import Phone_Lightmode from "./Logos/Phone_Lightmode.png";
-import Gmail from "./Logos/Gmail.png";
+import Gmail_Darkmode from "./Logos/Gmail_Darkmode.png";
+import Gmail_Lightmode from "./Logos/Gmail_Lightmode.png";
 import Github_Darkmode from "./Logos/Github_Darkmode.png";
 import Github_Lightmode from "./Logos/Github_Lightmode.png";
 import LinkedIn_Darkmode from "./Logos/LinkedIn_Darkmode.png";
@@ -49,7 +50,16 @@ function ContactMe() {
               href="mailto:aliabdelfatah455@gmail.com"
               className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
             >
-              <img src={Gmail} alt="Gmail" className="size-7" />
+              <img
+                src={Gmail_Darkmode}
+                alt="Gmail"
+                className="hidden dark:block size-7"
+              />
+              <img
+                src={Gmail_Lightmode}
+                alt="Gmail"
+                className="dark:hidden size-7"
+              />
               <span className="font-semibold hover:underline">
                 aliabdelfatah455@gmail.com
               </span>
