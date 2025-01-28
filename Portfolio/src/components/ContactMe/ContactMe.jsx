@@ -1,11 +1,11 @@
 import React from "react";
 import Phone_Darkmode from "./Logos/Phone_Darkmode.png";
-import Phone_lightmode from "./Logos/Phone_lightmode.png";
+import Phone_Lightmode from "./Logos/Phone_Lightmode.png";
 import Gmail from "./Logos/Gmail.png";
 import Github_Darkmode from "./Logos/Github_Darkmode.png";
-import Github_lightmode from "./Logos/Github_lightmode.png";
+import Github_Lightmode from "./Logos/Github_Lightmode.png";
 import LinkedIn_Darkmode from "./Logos/LinkedIn_Darkmode.png";
-import LinkedIn_lightmode from "./Logos/LinkedIn_lightmode.png";
+import LinkedIn_Lightmode from "./Logos/LinkedIn_Lightmode.png";
 
 function ContactMe() {
   const phoneNumber = "+201011624638";
@@ -37,8 +37,8 @@ function ContactMe() {
                 className="hidden dark:block size-7"
               />
               <img
-                src={Phone_lightmode}
-                alt="Phone_lightmode"
+                src={Phone_Lightmode}
+                alt="Phone_Lightmode"
                 className="dark:hidden size-7"
               />
               <span className="font-semibold">01011624638</span>
@@ -60,8 +60,8 @@ function ContactMe() {
                 className="hidden dark:block size-7"
               />
               <img
-                src={Github_lightmode}
-                alt="Github_lightmode"
+                src={Github_Lightmode}
+                alt="Github_Lightmode"
                 className="dark:hidden size-7"
               />
               <span className="font-semibold">GitHub</span>
@@ -76,8 +76,8 @@ function ContactMe() {
                 className="hidden dark:block size-7"
               />
               <img
-                src={LinkedIn_lightmode}
-                alt="LinkedIn_lightmode"
+                src={LinkedIn_Lightmode}
+                alt="LinkedIn_Lightmode"
                 className="dark:hidden size-7"
               />
               <span className="font-semibold">LinkedIn</span>
