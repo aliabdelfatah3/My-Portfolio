@@ -24,22 +24,21 @@ function Home() {
             alt="My Photo"
           />
         </div>
-        <div className="flex flex-col justify-center text-center pt-10 w-80 animate-slideUp">
+        <div className="flex flex-col justify-center items-center text-center pt-10 w-80 animate-slideUp">
           <p className="font-normal dark:text-white dark:font-Montserrat">
             Explore the creative projects showcasing my skills and passion for
             design.
           </p>
           <button
             onClick={handleClick}
-            className="font-eb-garamond bg-Org hover:bg-black hover:text-Org
-             transition-colors duration-500 flex justify-center text-center text-base 
-             font-extralight rounded-full shadow-md mx-20 mt-5 py-3 dark:bg-darklight 
+            className="font-eb-garamond w-[160px] bg-Org hover:bg-black hover:text-Org
+             transition-colors duration-500 flex justify-center text-center  
+             font-extralight rounded-full shadow-md  mt-5 py-3 dark:bg-darklight 
              dark:shadow-none dark:border dark:border-lines dark:text-lines 
              dark:hover:bg-lines dark:hover:text-black "
           >
             View Projects
           </button>
-          
         </div>
       </div>
     </>

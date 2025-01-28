@@ -35,9 +35,9 @@ function AboutMe() {
           </p>
         </div>
       </div>
-      <div>
+      <div className="mt-5">
         <button
-          className={`font-eb-garamond w-[170px]  uppercase bg-Org hover:bg-black hover:text-Org font-light text-sm rounded-full shadow-md px-10 mt-5 py-3  dark:bg-darklight 
+          className={`font-eb-garamond w-[160px] bg-Org hover:bg-black hover:text-Org font-extralight transition-colors duration-500 rounded-full shadow-md  py-2.5  dark:bg-darklight 
               dark:shadow-none dark:border dark:border-lines dark:text-lines 
               dark:hover:bg-lines dark:hover:text-black`}
         >
@@ -45,8 +45,9 @@ function AboutMe() {
             href="https://drive.google.com/file/d/1uouTcmwA_oUIEaMq_DBBZVsThsCebbLs/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
+            className=""
           >
-            updated cv
+            Updated CV
           </a>
         </button>
       </div>
