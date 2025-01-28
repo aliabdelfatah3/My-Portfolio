@@ -20,7 +20,9 @@ function Skills() {
       <div className="w-full h-5/6 flex justify-center items-center">
         <div className="flex items-center justify-center bg-Bej shadow-2xl dark:bg-purple-950 text-center w-2/3 h-96 ">
           <div className="text-center flex flex-col gap-10">
-            <h1 className="text-2xl dark:text-white">Skills</h1>
+            <h1 className="text-2xl dark:text-white font-sans font-bold">
+              Skills
+            </h1>
             <div className="flex flex-wrap justify-center gap-16">
               <img
                 src={HTML_logo}

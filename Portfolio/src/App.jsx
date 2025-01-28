@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/About/AboutMe";
-import ContactUs from "./components/ContactUs/ContactsUs";
+import ContactMe from "./components/ContactMe/ContactMe";
 import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "./components/Themes/ThemeProvider";
@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
-            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/contact-me" element={<ContactMe />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
           </Routes>

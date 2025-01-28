@@ -39,6 +39,7 @@ function Home() {
           >
             View Projects
           </button>
+          
         </div>
       </div>
     </>

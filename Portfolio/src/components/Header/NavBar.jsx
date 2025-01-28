@@ -67,9 +67,9 @@ function NavBar() {
                   : "text-sky-500 hover:text-sky-600"
               }`
             }
-            to={"/contact-us"}
+            to={"/contact-me"}
           >
-            Contact Us
+            Contact Me
           </NavLink>
         </li>
         <li>
