@@ -14,7 +14,7 @@ function ContactMe() {
   return (
     <>
       <div className="w-full h-5/6 flex justify-center items-center ">
-        <div className="flex flex-col items-center justify-center bg-white shadow-2xl dark:bg-purple-950 text-center w-full sm:w-[80%] md:w-[60%] lg:w-[40%] h-auto sm:h-[500px] md:h-[600px] rounded-lg p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center justify-center bg-white shadow-2xl dark:bg-purple-950 text-center w-full sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] h-auto sm:h-[500px] md:h-[600px] rounded-lg p-6 transform transition-all duration-500 lg:hover:scale-105 lg:hover:shadow-xl">
           <div className="text-black dark:text-white">
             <h1 className="text-4xl font-semibold text-center mb-4 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500">
               Contact Me
@@ -30,7 +30,7 @@ function ContactMe() {
           <div className="flex flex-col gap-6 mt-6">
             <a
               href={`tel:${phoneNumber}`}
-              className="flex text-blue-500 items-center gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
+              className="flex text-blue-500 items-center gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 lg:hover:scale-105"
             >
               <img
                 src={Phone_Darkmode}
@@ -42,13 +42,13 @@ function ContactMe() {
                 alt="Phone_Lightmode"
                 className="dark:hidden size-7"
               />
-              <span className="font-semibold hover:underline">
+              <span className="font-semibold lg:hover:underline">
                 +20 101 162 4638
               </span>
             </a>
             <a
               href="mailto:aliabdelfatah455@gmail.com"
-              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
+              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 lg:hover:scale-105"
             >
               <img
                 src={Gmail_Darkmode}
@@ -66,7 +66,7 @@ function ContactMe() {
             </a>
             <a
               href="https://github.com/aliabdelfatah3"
-              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
+              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 lg:hover:scale-105"
             >
               <img
                 src={Github_Darkmode}
@@ -82,7 +82,7 @@ function ContactMe() {
             </a>
             <a
               href="https://www.linkedin.com/in/ali-abdelfattah-3looloo-866b91198"
-              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 hover:scale-105"
+              className="flex text-blue-500 gap-3 text-lg hover:text-blue-700 transform transition-all duration-300 lg:hover:scale-105"
             >
               <img
                 src={LinkedIn_Darkmode}

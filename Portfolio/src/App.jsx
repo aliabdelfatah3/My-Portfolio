@@ -4,7 +4,6 @@ import Home from "./components/Home/Home";
 import AboutMe from "./components/About/AboutMe";
 import ContactMe from "./components/ContactMe/ContactMe";
 import NavBar from "./components/Header/NavBar";
-import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "./components/Themes/ThemeProvider";
 import "./App.css";
 import Projects from "./components/Projects/Projects";
@@ -16,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-orange-100 dark:bg-darklight h-screen">
+    <div className="bg-orange-100 dark:bg-darklight h-screen relative">
       <ThemeProvider>
         <Router>
           <NavBar />
