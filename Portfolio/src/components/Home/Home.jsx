@@ -31,7 +31,7 @@ function Home() {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center text-center pt-12 w-full lg:w-80 md:w-72 ">
-            <p className="font-normal lg:w-[250px] md:w-52 xl:w-auto dark:text-white dark:font-Montserrat">
+            <p className="font-normal lg:w-[250px] md:w-52 w-[300px] xl:w-auto dark:text-white dark:font-Montserrat">
               Explore the creative projects showcasing my skills and passion for
               design.
             </p>
