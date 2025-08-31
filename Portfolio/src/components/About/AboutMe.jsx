@@ -1,5 +1,5 @@
 import React from "react";
-import Profile_Pic from "./Pic/Profile_pic.jpg";
+import Profile_Pic from "./Pic/Profile_Pic.jpg";
 function AboutMe() {
   return (
     <div className="flex flex-col justify-center gap-2 text-center">
