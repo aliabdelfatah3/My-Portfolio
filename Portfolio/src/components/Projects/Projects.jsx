@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import Movie_Database from "./Pic/Movie_Database.png";
 import TodoList from "./Pic/TodoList.png";
+import mini_shopify from "./Pic/mini_shopify.png";
 function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -35,7 +36,7 @@ function Projects() {
         <div className="flex lg:flex-row items-center justify-center gap-5 border border-black xl:w-[70%] lg:w-[90%] md:h-96 h-64 dark:border-lines">
           <div className="text-center flex flex-col gap-2">
             <h1 className="md:text-2xl dark:text-white">Movie Database</h1>
-            <a href="https://capstone-project-five-delta.vercel.app/">
+            <a target="_blank" href="https://capstone-project-five-delta.vercel.app/">
               <img
                 src={Movie_Database}
                 alt="Movie Database"
@@ -45,10 +46,20 @@ function Projects() {
           </div>
           <div className="text-center flex flex-col gap-2">
             <h1 className="md:text-2xl dark:text-white">Todo List</h1>
-            <a href="https://react-todo-xi-umber.vercel.app/">
+            <a target="_blank" href="https://react-todo-xi-umber.vercel.app/">
               <img
                 src={TodoList}
                 alt="Todo List"
+                className="md:w-96 md:h-72 w-72 h-48 lg:hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+            </a>
+          </div>
+          <div className="text-center flex flex-col gap-2">
+            <h1 className="md:text-2xl dark:text-white">Mini Shopify</h1>
+            <a target="_blank" href="https://mini-shopify.vercel.app/">
+              <img
+                src={mini_shopify}
+                alt="mini shopify"
                 className="md:w-96 md:h-72 w-72 h-48 lg:hover:scale-105 transition-transform duration-700 ease-in-out"
               />
             </a>

@@ -1,4 +1,3 @@
-import React from "react";
 import HTML_logo from "./Pic/HTML_logo.png";
 import CSS_logo from "./Pic/CSS_logo.png";
 import Git_logo from "./Pic/Git_logo.png";

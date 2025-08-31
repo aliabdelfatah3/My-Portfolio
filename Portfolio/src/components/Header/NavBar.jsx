@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useTheme } from "../Themes/ThemeProvider";
 import logo_transparent from "../../LogoPic/logo_transparent.png";
 import NightMode from "./Img/NightMode.png";

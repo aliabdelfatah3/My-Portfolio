@@ -1,5 +1,5 @@
 import React from "react";
-import Ali_Prof_Pic from "./Pic/Ali_Prof_Pic.jpg";
+import Profile_Pic from "./Pic/Profile_pic.jpg";
 function AboutMe() {
   return (
     <div className="flex flex-col justify-center gap-2 text-center">
@@ -10,8 +10,8 @@ function AboutMe() {
         <div className="flex flex-col pt-2 md:gap-5 gap-3 lg:flex-row items-center justify-center">
           <div className="flex justify-center lg:border-r border-b lg:border-b-0 pb-5 lg:pr-5 border-black w-1/2  dark:border-lines">
             <img
-              className="lg:size-96 md:size-56 "
-              src={Ali_Prof_Pic}
+              className="object-cover lg:size-96 md:size-56 "
+              src={Profile_Pic}
               alt="Ali's Pic"
             />
           </div>
@@ -38,7 +38,7 @@ function AboutMe() {
       </div>
       <div className="lg:mt-5">
         <a
-          href="https://drive.google.com/file/d/1uouTcmwA_oUIEaMq_DBBZVsThsCebbLs/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1Q_jxi9DdfEGVa5khvBb6ZNVBHzxHohao/view?usp=drive_link"
           target="_blank"
           rel="noreferrer"
         >
