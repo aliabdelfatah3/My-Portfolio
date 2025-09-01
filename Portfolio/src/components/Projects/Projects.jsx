@@ -26,17 +26,20 @@ function Projects() {
   }, []);
   return (
     <>
-      <div className="bg-ferany dark:bg-projects flex flex-col items-center justify-center py-20 ">
+      <div className="bg-ferany dark:bg-projects flex flex-col items-center justify-center py-20">
         <div ref={elementRef} className="pb-10">
           <h1 className="lg:font-eb-garamond md:text-8xl text-4xl dark:text-white  dark:font-bold dark:font-Montserrat">
             Projects
           </h1>
         </div>
 
-        <div className="flex lg:flex-row items-center justify-center gap-5 border border-black xl:w-[70%] lg:w-[90%] md:h-96 h-64 dark:border-lines">
+        <div className="flex lg:flex-row  items-center justify-center gap-5 border border-black xl:w-[70%] lg:w-[90%] md:h-96 h-64 dark:border-lines">
           <div className="text-center flex flex-col gap-2">
             <h1 className="md:text-2xl dark:text-white">Movie Database</h1>
-            <a target="_blank" href="https://capstone-project-five-delta.vercel.app/">
+            <a
+              target="_blank"
+              href="https://capstone-project-five-delta.vercel.app/"
+            >
               <img
                 src={Movie_Database}
                 alt="Movie Database"

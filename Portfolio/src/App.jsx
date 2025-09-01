@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AboutMe from "./components/About/AboutMe";
@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-orange-100 dark:bg-darklight h-screen relative">
+    <div className="bg-orange-100 dark:bg-darklight h-lvh w-lvw">
       <ThemeProvider>
         <Router>
           <NavBar />
