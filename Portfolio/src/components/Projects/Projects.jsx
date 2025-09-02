@@ -2,53 +2,58 @@ import React from "react";
 import Movie_Database from "./Pic/Movie_Database.png";
 import TodoList from "./Pic/TodoList.png";
 import mini_shopify from "./Pic/mini_shopify.png";
-function Projects() {
-  return (
-    <>
-      <div className="bg-ferany dark:bg-projects flex flex-col items-center justify-center py-20">
-        <div className="pb-10">
-          <h1 className="lg:font-eb-garamond md:text-8xl text-4xl dark:text-white  dark:font-bold dark:font-Montserrat">
-            Projects
-          </h1>
-        </div>
 
-        <div className="flex lg:flex-row  items-center justify-center gap-5 border border-black xl:w-[70%] lg:w-[90%] md:h-96 h-64 dark:border-lines">
-          <div className="text-center flex flex-col gap-2">
-            <h1 className="md:text-2xl dark:text-white">Movie Database</h1>
-            <a
-              target="_blank"
-              href="https://capstone-project-five-delta.vercel.app/"
-            >
+function Projects() {
+  const projects = [
+    {
+      title: "Movie Database",
+      img: Movie_Database,
+      link: "https://capstone-project-five-delta.vercel.app/",
+      desc: "Browse and explore movies with details and ratings.",
+    },
+    {
+      title: "Todo List",
+      img: TodoList,
+      link: "https://react-todo-xi-umber.vercel.app/",
+      desc: "Manage tasks with add, delete, and complete features.",
+    },
+    {
+      title: "Mini Shopify",
+      img: mini_shopify,
+      link: "https://mini-shopify.vercel.app/",
+      desc: "E-commerce mini app for shopping experience.",
+    },
+  ];
+
+  return (
+    <section className="bg-slate-100 dark:bg-projects py-20 flex flex-col items-center">
+      <h1 className="lg:font-eb-garamond md:text-7xl text-4xl dark:text-white font-bold mb-12">
+        Projects
+      </h1>
+
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[90%] max-w-6xl">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col items-center p-5"
+          >
+            <a href={project.link} target="_blank" rel="noreferrer">
               <img
-                src={Movie_Database}
-                alt="Movie Database"
-                className="md:w-96 md:h-72 w-72 h-48 lg:hover:scale-105 transition-transform duration-700 ease-in-out"
+                src={project.img}
+                alt={project.title}
+                className="rounded-xl w-full h-56 object-cover mb-4 hover:scale-105 transition-transform duration-500"
               />
             </a>
+            <h2 className="text-2xl font-semibold dark:text-white mb-2">
+              {project.title}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-center text-sm">
+              {project.desc}
+            </p>
           </div>
-          <div className="text-center flex flex-col gap-2">
-            <h1 className="md:text-2xl dark:text-white">Todo List</h1>
-            <a target="_blank" href="https://react-todo-xi-umber.vercel.app/">
-              <img
-                src={TodoList}
-                alt="Todo List"
-                className="md:w-96 md:h-72 w-72 h-48 lg:hover:scale-105 transition-transform duration-700 ease-in-out"
-              />
-            </a>
-          </div>
-          <div className="text-center flex flex-col gap-2">
-            <h1 className="md:text-2xl dark:text-white">Mini Shopify</h1>
-            <a target="_blank" href="https://mini-shopify.vercel.app/">
-              <img
-                src={mini_shopify}
-                alt="mini shopify"
-                className="md:w-96 md:h-72 w-72 h-48 lg:hover:scale-105 transition-transform duration-700 ease-in-out"
-              />
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </section>
   );
 }
 

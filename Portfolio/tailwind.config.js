@@ -19,7 +19,7 @@ export default {
       },
       colors: {
         "Dark-charcoal": "#333",
-        Bej: "#FDFFEF",
+        Bej: "#FFF7E6",
         Org: "#EEC355",
         ferany: "#F8F8F8",
         whats: "#2C2C2C",
