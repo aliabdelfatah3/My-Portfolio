@@ -1,33 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Movie_Database from "./Pic/Movie_Database.png";
 import TodoList from "./Pic/TodoList.png";
 import mini_shopify from "./Pic/mini_shopify.png";
 function Projects() {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, []);
   return (
     <>
       <div className="bg-ferany dark:bg-projects flex flex-col items-center justify-center py-20">
-        <div ref={elementRef} className="pb-10">
+        <div className="pb-10">
           <h1 className="lg:font-eb-garamond md:text-8xl text-4xl dark:text-white  dark:font-bold dark:font-Montserrat">
             Projects
           </h1>
