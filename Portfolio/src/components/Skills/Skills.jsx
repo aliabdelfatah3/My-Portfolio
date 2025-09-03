@@ -1,3 +1,4 @@
+import React from "react";
 import HTML_logo from "./Pic/HTML_logo.png";
 import CSS_logo from "./Pic/CSS_logo.png";
 import Git_logo from "./Pic/Git_logo.png";
@@ -13,91 +14,42 @@ import Vercel_logo from "./Pic/Vercel_logo.png";
 import Vite_logo from "./Pic/Vite_logo.png";
 import Webflow_logo from "./Pic/Webflow_logo.png";
 
+const logos = [
+  { src: HTML_logo, alt: "HTML" },
+  { src: CSS_logo, alt: "CSS" },
+  { src: React_logo, alt: "React" },
+  { src: JavaScript_logo, alt: "JavaScript" },
+  { src: Git_logo, alt: "Git" },
+  { src: GitHub_logo, alt: "GitHub" },
+  { src: Bootstrap_logo, alt: "Bootstrap" },
+  { src: Material_UI_logo, alt: "Material UI" },
+  { src: Redux_logo, alt: "Redux" },
+  { src: Tailwindcss_logo, alt: "Tailwind CSS" },
+  { src: TypeScript_logo, alt: "TypeScript" },
+  { src: Vercel_logo, alt: "Vercel" },
+  { src: Vite_logo, alt: "Vite" },
+  { src: Webflow_logo, alt: "Webflow" },
+];
+
 function Skills() {
   return (
-    <>
-      <div className="w-full h-5/6 flex justify-center items-center">
-        <div className="flex items-center justify-center bg-Bej shadow-2xl dark:bg-purple-950 text-center  ">
-          <div className="text-center flex flex-col md:gap-5">
-            <h1 className="text-2xl dark:text-white font-sans font-bold">
-              Skills
-            </h1>
-            <div className="flex flex-wrap py-4 justify-center md:gap-16 gap-5">
-              <img
-                src={HTML_logo}
-                alt="HTML"
-                className="md:size-24 size-16 lg:hover:scale-110 "
-              />
-              <img
-                src={CSS_logo}
-                alt="CSS"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={React_logo}
-                alt="React"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={JavaScript_logo}
-                alt="JavaScript"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Git_logo}
-                alt="Git"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={GitHub_logo}
-                alt="GitHub"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Bootstrap_logo}
-                alt="Bootstrap"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Material_UI_logo}
-                alt="Material UI"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Redux_logo}
-                alt="Redux"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Tailwindcss_logo}
-                alt="Tailwind CSS"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={TypeScript_logo}
-                alt="TypeScript"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Vercel_logo}
-                alt="Vercel"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Vite_logo}
-                alt="Vite"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-              <img
-                src={Webflow_logo}
-                alt="Webflow"
-                className="md:size-24 size-16 lg:hover:scale-110"
-              />
-            </div>
-          </div>
+    <div className="w-full h-full flex justify-center items-center px-4">
+      <div className="flex flex-col items-center justify-center bg-Bej dark:bg-purple-950 shadow-2xl rounded-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[70%]">
+        <h1 className="text-2xl md:text-3xl font-bold dark:text-white mb-4">
+          Skills
+        </h1>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="size-16 sm:size-20 md:size-24 lg:hover:scale-110 transition-transform duration-300"
+            />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
