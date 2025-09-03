@@ -44,9 +44,9 @@ function NavBar() {
   const MobileLinkClasses = ({ isActive }) =>
     `${
       isActive
-        ? "text-[#5E3395] dark:text-[#5179E7]  bg-sky-100 dark:bg-[#211B5B] "
-        : "text-[#0E3395]"
-    } w-fit rounded-md py-2 px-4 `;
+        ? "text-[#284AAE] dark:text-[#9BB7F2]  bg-sky-100 dark:bg-[#211B5B] "
+        : "dark:text-[#5073D6]"
+    } w-[120px] rounded-md py-2 px-4 `;
 
   const links = [
     { path: "/", label: "Home" },
@@ -58,7 +58,7 @@ function NavBar() {
 
   return (
     <nav
-      className={`relative bg-Bej flex lg:justify-around lg:gap-0 gap-20 justify-around items-center font-bold py-5 top-0 z-50 transition-transform duration-300 ${
+      className={`relative bg-Bej flex  lg:justify-around lg:gap-0 gap-20 justify-around items-center font-bold py-5 top-0 z-50 transition-transform duration-300 ${
         isSticky ? "-translate-y-full" : "translate-y-0"
       } dark:bg-slate-950`}
     >
@@ -108,19 +108,17 @@ function NavBar() {
         <img src={NightMode} alt="Night Mode" className="h-6 w-6" />
       </div>
 
-      {/* Mobile Menu Icon */}
 
       {/* Mobile Dropdown Menu */}
 
       <div
-        // onClick={(e) => e.stopPropagation()}
-        className={`fixed inset-0 bg-opacity-95 dark:bg-opacity-90 pt-2 h-fit w-40 z-50 bg-[#FFFFE4] dark:bg-[#201B4B] top-full 
+        className={`fixed inset-0 bg-opacity-95 dark:bg-opacity-95 pt-2 h-fit w-1/2 z-50 bg-[#FFFFE4] dark:bg-[#201B4B] top-full 
             flex items-center flex-col transition-transform duration-300 ease-in-out ${
               isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
             } lg:hidden `}
-        //
+        
       >
-        <ul className="flex flex-col text-center w-fit text-md ">
+        <ul className="flex flex-col text-center text-md ">
           {links.map((link) => (
             <li className="flex justify-center" key={link.path}>
               <NavLink

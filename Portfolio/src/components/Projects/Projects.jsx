@@ -35,13 +35,13 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col items-center p-5"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg lg:hover:shadow-2xl transition-all duration-500 transform lg:hover:-translate-y-2 flex flex-col items-center p-5"
           >
             <a href={project.link} target="_blank" rel="noreferrer">
               <img
                 src={project.img}
                 alt={project.title}
-                className="rounded-xl w-full h-56 object-cover mb-4 hover:scale-105 transition-transform duration-500"
+                className="rounded-xl w-full h-56 object-cover mb-4 lg:hover:scale-105 transition-transform duration-500"
               />
             </a>
             <h2 className="text-2xl font-semibold dark:text-white mb-2">
