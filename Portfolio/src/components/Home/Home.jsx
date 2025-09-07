@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Pic1 from "./HomePic/Pic1.png";
-import MyPhoto from "./HomePic/MyPhoto.jpg";
-
+import Home_Pic from "./HomePic/Home_Pic.png"
+  
 function Home() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -25,8 +25,8 @@ function Home() {
               />
               <img
                 className="absolute md:h-96 w lg:top-20 top-10 lg:left-16 left-10 animate-fadeIn"
-                src={MyPhoto}
-                alt="My Photo"
+                src={Home_Pic}
+                alt="Profile Pic"
               />
             </div>
           </div>

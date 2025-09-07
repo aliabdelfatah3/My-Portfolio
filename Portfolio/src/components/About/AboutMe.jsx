@@ -1,6 +1,5 @@
 import React from "react";
-import Profile_Pic from "./Pic/Profile_Pic.jpg";
-
+import About_Pic from "./Pic/About_Pic.png";
 function AboutMe() {
   return (
     <div className="flex flex-col justify-center gap-10 text-center px-4">
@@ -16,7 +15,7 @@ function AboutMe() {
           <div className="flex justify-center lg:border-r border-b lg:border-b-0 pb-5 lg:pr-8 border-black dark:border-lines">
             <img
               className="object-cover xl:size-96 lg:size-72 md:size-56 size-40 rounded-md"
-              src={Profile_Pic}
+              src={About_Pic}
               alt="Ali's Pic"
             />
           </div>
