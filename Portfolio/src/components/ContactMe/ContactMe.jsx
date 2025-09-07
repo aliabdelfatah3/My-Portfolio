@@ -9,7 +9,32 @@ import LinkedIn_Darkmode from "./Logos/LinkedIn_Darkmode.png";
 import LinkedIn_Lightmode from "./Logos/LinkedIn_Lightmode.png";
 
 function ContactMe() {
-  const phoneNumber = "+201011624638";
+  const contacts = [
+    {
+      href: "tel:+201011624638",
+      label: "+20 101 162 4638",
+      darkIcon: Phone_Darkmode,
+      lightIcon: Phone_Lightmode,
+    },
+    {
+      href: "mailto:aliabdelfatah455@gmail.com",
+      label: "aliabdelfatah455@gmail.com",
+      darkIcon: Gmail_Darkmode,
+      lightIcon: Gmail_Lightmode,
+    },
+    {
+      href: "https://github.com/aliabdelfatah3",
+      label: "GitHub",
+      darkIcon: Github_Darkmode,
+      lightIcon: Github_Lightmode,
+    },
+    {
+      href: "https://www.linkedin.com/in/ali-abdelfattah-3looloo-866b91198",
+      label: "LinkedIn",
+      darkIcon: LinkedIn_Darkmode,
+      lightIcon: LinkedIn_Lightmode,
+    },
+  ];
 
   return (
     <div className="w-full h-5/6 flex justify-center items-center">
@@ -33,82 +58,29 @@ function ContactMe() {
           </p>
         </div>
 
+        {/* Mapping */}
         <div className="flex flex-col gap-4 sm:gap-6 mt-6">
-          <a
-            href={`tel:${phoneNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex text-blue-500 items-center gap-2 sm:gap-3 text-base sm:text-lg"
-          >
-            <img
-              src={Phone_Darkmode}
-              alt="Phone_Darkmode"
-              className="hidden dark:block size-5 sm:size-7"
-            />
-            <img
-              src={Phone_Lightmode}
-              alt="Phone_Lightmode"
-              className="dark:hidden size-5 sm:size-7"
-            />
-            <span className="font-semibold">+20 101 162 4638</span>
-          </a>
-
-          <a
-            href="mailto:aliabdelfatah455@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex text-blue-500 gap-2 sm:gap-3 text-base sm:text-lg"
-          >
-            <img
-              src={Gmail_Darkmode}
-              alt="Gmail"
-              className="hidden dark:block size-5 sm:size-7"
-            />
-            <img
-              src={Gmail_Lightmode}
-              alt="Gmail"
-              className="dark:hidden size-5 sm:size-7"
-            />
-            <span className="font-semibold">aliabdelfatah455@gmail.com</span>
-          </a>
-
-          <a
-            href="https://github.com/aliabdelfatah3"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex text-blue-500 gap-2 sm:gap-3 text-base sm:text-lg"
-          >
-            <img
-              src={Github_Darkmode}
-              alt="Github_Darkmode"
-              className="hidden dark:block size-5 sm:size-7"
-            />
-            <img
-              src={Github_Lightmode}
-              alt="Github_Lightmode"
-              className="dark:hidden size-5 sm:size-7"
-            />
-            <span className="font-semibold">GitHub</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/ali-abdelfattah-3looloo-866b91198"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex text-blue-500 gap-2 sm:gap-3 text-base sm:text-lg"
-          >
-            <img
-              src={LinkedIn_Darkmode}
-              alt="LinkedIn_Darkmode"
-              className="hidden dark:block size-5 sm:size-7"
-            />
-            <img
-              src={LinkedIn_Lightmode}
-              alt="LinkedIn_Lightmode"
-              className="dark:hidden size-5 sm:size-7"
-            />
-            <span className="font-semibold">LinkedIn</span>
-          </a>
+          {contacts.map(({ href, label, darkIcon, lightIcon }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex text-blue-500 lg:hover:underline items-center gap-2 sm:gap-3 text-base sm:text-lg"
+            >
+              <img
+                src={darkIcon}
+                alt={`${label}_dark`}
+                className="hidden dark:block size-5 sm:size-7"
+              />
+              <img
+                src={lightIcon}
+                alt={`${label}_light`}
+                className="dark:hidden size-5 sm:size-7"
+              />
+              <span className="font-semibold">{label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </div>
