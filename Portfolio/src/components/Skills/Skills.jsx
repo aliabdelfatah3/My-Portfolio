@@ -13,6 +13,7 @@ import TypeScript_logo from "./Pic/TypeScript_logo.png";
 import Vercel_logo from "./Pic/Vercel_logo.png";
 import Vite_logo from "./Pic/Vite_logo.png";
 import Webflow_logo from "./Pic/Webflow_logo.png";
+import MySql_logo from "./Pic/MySql_logo.png";
 
 const logos = [
   { src: HTML_logo, alt: "HTML" },
@@ -29,6 +30,7 @@ const logos = [
   { src: Vercel_logo, alt: "Vercel" },
   { src: Vite_logo, alt: "Vite" },
   { src: Webflow_logo, alt: "Webflow" },
+  { src: MySql_logo, alt: "MySQL"},
 ];
 
 function Skills() {

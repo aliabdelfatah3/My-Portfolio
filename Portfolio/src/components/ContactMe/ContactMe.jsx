@@ -13,7 +13,6 @@ function ContactMe() {
 
   return (
     <div className="w-full h-5/6 flex justify-center items-center">
-      {/* margin خارجي على الشاشات الصغيرة والمتوسطة */}
       <div
         className="m-4 sm:m-6 lg:m-0 
                    flex flex-col items-center justify-center 
