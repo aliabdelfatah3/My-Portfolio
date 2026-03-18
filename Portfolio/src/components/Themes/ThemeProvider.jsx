@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 // Create the context
 const ThemeContext = createContext();
@@ -38,7 +39,12 @@ export const ThemeProvider = ({ children }) => {
   );
 }
 
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 // Custom hook to use the ThemeContext in components
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
   return useContext(ThemeContext);
 };

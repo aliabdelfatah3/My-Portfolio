@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const ScrollAnimation = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,13 +15,15 @@ const ScrollAnimation = ({ children }) => {
       { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
@@ -35,6 +38,10 @@ const ScrollAnimation = ({ children }) => {
       {children}
     </div>
   );
+};
+
+ScrollAnimation.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ScrollAnimation;

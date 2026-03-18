@@ -2,17 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .nav {
-    @apply hover:text-sky-800 text-sky-500 font-bold py-2 px-4 rounded;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@layer base {
+  body {
+    @apply font-inter antialiased transition-colors duration-500;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    scroll-margin-top: 5rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-syne tracking-tight;
   }
 }
 
-.active-link {
-  color: #1e40af; /* Tailwind color or any custom color */
-  font-weight: bold;
-}
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-premium-gradient animate-gradient-x;
+  }
+  .glass {
+    @apply bg-white/70 dark:bg-[#111827]/70 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
+  }
 
-.inactive-link {
-  color: #6b7280; /* Tailwind color or any custom color */
+  /* Scroll Reveal base states */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays for children */
+  .reveal-stagger > *:nth-child(1) { transition-delay: 0.05s; }
+  .reveal-stagger > *:nth-child(2) { transition-delay: 0.1s; }
+  .reveal-stagger > *:nth-child(3) { transition-delay: 0.15s; }
+  .reveal-stagger > *:nth-child(4) { transition-delay: 0.2s; }
+  .reveal-stagger > *:nth-child(5) { transition-delay: 0.25s; }
+  .reveal-stagger > *:nth-child(6) { transition-delay: 0.3s; }
+  .reveal-stagger > *:nth-child(7) { transition-delay: 0.35s; }
+  .reveal-stagger > *:nth-child(8) { transition-delay: 0.4s; }
+  .reveal-stagger > *:nth-child(9) { transition-delay: 0.45s; }
+  .reveal-stagger > *:nth-child(10) { transition-delay: 0.5s; }
+  .reveal-stagger > *:nth-child(n+11) { transition-delay: 0.55s; }
+
+  .reveal-from-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-from-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-from-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
