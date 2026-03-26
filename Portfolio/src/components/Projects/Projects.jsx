@@ -145,6 +145,12 @@ function Projects() {
       gradient: "from-blue-600 to-purple-600",
     },
     {
+  title: "HexaShop – Premium E-Commerce Platform",
+  link: "https://e-commerce-nu-eight-64.vercel.app/",
+  desc: "Scalable full-stack e-commerce application built with React 19 and .NET 8. Implemented global state management with Zustand, optimized data fetching using React Query, secure authentication with JWT & Bcrypt, and a feature-rich shopping experience including cart persistence and order tracking.",
+  gradient: "from-orange-500 to-pink-600",
+},
+    {
       title: "Angular Post CRUD",
       link: "https://post-crud-8s4yvyeiq-3looloos-projects.vercel.app/",
       desc: "High-performance CRUD application using Angular 19+ to manage data from a RESTful API. Features a reactive state management system using RxJS, custom pagination, and Tailwind CSS UI.",
