@@ -25,7 +25,7 @@ const FullPageParticles = () => {
     const SPEED = 0.28;
 
     // Hue per section (shifts as user scrolls)
-    const HUE_STOPS = [260, 210, 180, 150, 240, 200, 280];
+    const HUE_STOPS = [196, 188, 178, 204, 190, 174, 198];
 
     const particles = Array.from({ length: COUNT }, () => ({
       x: Math.random() * W,

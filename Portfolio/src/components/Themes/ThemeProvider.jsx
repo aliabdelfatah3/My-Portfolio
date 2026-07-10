@@ -6,19 +6,16 @@ const ThemeContext = createContext();
 
 // Theme Provider component to wrap around the app
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // On mount, set the initial theme based on system preferences or previously saved theme
   useEffect(() => {
-    const darkModePreference = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme) {
       setIsDarkMode(savedTheme === "dark");
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    } else if (darkModePreference) {
+    } else {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
     }

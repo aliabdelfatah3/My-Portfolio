@@ -50,7 +50,7 @@ const CustomCursor = ({ mousePos }) => {
           marginLeft: isHovering ? '0px' : '-4px',
           marginTop: isHovering ? '0px' : '-4px',
           borderRadius: '50%',
-          backgroundColor: '#7c3aed',
+          backgroundColor: '#19B8F2',
           opacity: isVisible ? 1 : 0,
           transition: 'width 0.2s ease, height 0.2s ease, opacity 0.2s ease',
           mixBlendMode: 'difference',
@@ -67,11 +67,11 @@ const CustomCursor = ({ mousePos }) => {
           marginLeft: isHovering ? '-25px' : '-18px',
           marginTop: isHovering ? '-25px' : '-18px',
           borderRadius: '50%',
-          border: `2px solid ${isHovering ? 'rgba(236, 72, 153, 0.8)' : 'rgba(124, 58, 237, 0.5)'}`,
-          backgroundColor: isHovering ? 'rgba(236, 72, 153, 0.08)' : 'transparent',
+          border: `2px solid ${isHovering ? 'rgba(39, 213, 196, 0.8)' : 'rgba(25, 184, 242, 0.5)'}`,
+          backgroundColor: isHovering ? 'rgba(39, 213, 196, 0.08)' : 'transparent',
           boxShadow: isHovering
-            ? '0 0 20px rgba(236, 72, 153, 0.4)'
-            : '0 0 10px rgba(124, 58, 237, 0.2)',
+            ? '0 0 20px rgba(39, 213, 196, 0.4)'
+            : '0 0 10px rgba(25, 184, 242, 0.2)',
           opacity: isVisible ? 1 : 0,
           transition: 'width 0.3s ease, height 0.3s ease, margin 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease',
         }}

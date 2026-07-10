@@ -1,108 +1,90 @@
-import { useEffect, useRef } from "react";
-import HTML_logo from "./Pic/HTML_logo.png";
-import CSS_logo from "./Pic/CSS_logo.png";
-import Git_logo from "./Pic/Git_logo.png";
-import GitHub_logo from "./Pic/GitHub_logo.png";
-import Bootstrap_logo from "./Pic/Bootstrap_logo.png";
-import JavaScript_logo from "./Pic/JavaScript_logo.png";
-import Material_UI_logo from "./Pic/Material_UI_logo.png";
-import React_logo from "./Pic/React_logo.png";
-import Redux_logo from "./Pic/Redux_logo.png";
-import Tailwindcss_logo from "./Pic/Tailwindcss_logo.png";
-import TypeScript_logo from "./Pic/TypeScript_logo.png";
-import Vercel_logo from "./Pic/Vercel_logo.png";
-import Vite_logo from "./Pic/Vite_logo.png";
-import Webflow_logo from "./Pic/Webflow_logo.png";
-import MySql_logo from "./Pic/MySql_logo.png";
+const skills = [
+  { name: "HTML, CSS, and responsive layout", level: 94, group: "Frontend" },
+  { name: "JavaScript and TypeScript", level: 90, group: "Language" },
+  { name: "React.js, Zustand, and Redux", level: 88, group: "Framework" },
+  { name: "Angular and RxJS", level: 80, group: "Framework" },
+  { name: "Tailwind CSS, Bootstrap, Material UI", level: 90, group: "Interface" },
+  { name: "Git, GitHub, Vite, and Vercel", level: 86, group: "Workflow" },
+];
 
-import { FaAngular, FaPhp, FaCube } from "react-icons/fa";
-
-const allItems = [
-  { type: "img", src: HTML_logo,        alt: "HTML" },
-  { type: "img", src: CSS_logo,         alt: "CSS" },
-  { type: "img", src: JavaScript_logo,  alt: "JavaScript" },
-  { type: "img", src: React_logo,       alt: "React" },
-  { type: "img", src: Redux_logo,       alt: "Redux" },
-  { type: "img", src: Tailwindcss_logo, alt: "Tailwind CSS" },
-  { type: "img", src: TypeScript_logo,  alt: "TypeScript" },
-  { type: "img", src: Git_logo,         alt: "Git" },
-  { type: "img", src: GitHub_logo,      alt: "GitHub" },
-  { type: "img", src: Bootstrap_logo,   alt: "Bootstrap" },
-  { type: "img", src: Material_UI_logo, alt: "Material UI" },
-  { type: "img", src: Vercel_logo,      alt: "Vercel" },
-  { type: "img", src: Vite_logo,        alt: "Vite" },
-  { type: "img", src: Webflow_logo,     alt: "Webflow" },
-  { type: "img", src: MySql_logo,       alt: "MySQL" },
-  { type: "icon", Icon: FaAngular, alt: "Angular", color: "text-[#DD0031]" },
-  { type: "icon", Icon: FaCube,    alt: "Zustand", color: "text-[#4d2d18] dark:text-[#a07f60]" },
-  { type: "icon", Icon: FaPhp,     alt: "PHP",     color: "text-[#777BB4]" },
+const tools = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Angular",
+  "Tailwind CSS",
+  "Redux",
+  "Zustand",
+  "RxJS",
+  "REST APIs",
+  "Vite",
+  "Vercel",
+  "Git",
+  "GitHub",
+  "Material UI",
+  "Bootstrap",
+  "Webflow",
+  "MySQL",
+  "PHP",
 ];
 
 function Skills() {
-  const gridRef = useRef(null);
-
-  useEffect(() => {
-    const node = gridRef.current;
-    if (!node) return;
-
-    const items = node.querySelectorAll(".skill-item");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          items.forEach((el, i) => {
-            setTimeout(() => {
-              el.style.opacity = "1";
-              el.style.transform = "translateY(0)";
-            }, i * 55);
-          });
-          observer.unobserve(node);
-        }
-      },
-      { threshold: 0.05, rootMargin: "0px 0px -50px 0px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="flex items-center justify-center flex-1 w-full px-4 pt-10 pb-10 lg:pt-16">
-      <div className="flex flex-col items-center justify-center bg-Bej dark:bg-[#201B4B] shadow-2xl rounded-lg p-6 sm:p-8 w-full max-w-[1200px]">
-        <h1 className="mb-6 text-2xl font-bold text-center md:text-3xl xl:text-4xl dark:text-white font-eb-garamond">
-          Skills
-        </h1>
-        <div
-          ref={gridRef}
-          className="flex flex-wrap justify-center gap-6 mb-2 sm:gap-8 md:gap-10 lg:gap-12"
-        >
-          {allItems.map((item, index) => (
+    <div className="border-y border-dark-border bg-[#061216] px-5 py-24 sm:px-8 lg:px-12">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-accent-primary">
+            My expertise
+          </p>
+          <h2 className="font-syne text-4xl font-bold leading-tight tracking-[-0.025em] text-dark-text-primary sm:text-5xl">
+            Skills & technologies
+          </h2>
+          <p className="mt-5 max-w-xl text-base leading-8 text-dark-text-secondary">
+            A modern frontend stack for building responsive product screens,
+            reusable components, API-connected flows, and maintainable
+            deployment-ready interfaces.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {skills.map((skill) => (
             <div
-              key={index}
-              className="skill-item flex flex-col items-center justify-center gap-2 group"
-              style={{
-                opacity: 0,
-                transform: "translateY(28px)",
-                transition: `opacity 0.5s ease, transform 0.5s ease`,
-              }}
+              key={skill.name}
+              className="rounded-2xl border border-dark-border bg-dark-card p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)]"
             >
-              {item.type === "img" ? (
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.09em] text-accent-secondary">
+                    {skill.group}
+                  </p>
+                  <h3 className="mt-1 font-syne text-lg font-semibold tracking-[-0.01em] text-dark-text-primary">
+                    {skill.name}
+                  </h3>
+                </div>
+                <span className="font-mono text-sm font-semibold tabular-nums text-accent-primary">
+                  {skill.level}%
+                </span>
+              </div>
+              <div className="h-2 overflow-hidden rounded-full bg-[#0C2732]">
+                <div
+                  className="h-full rounded-full bg-accent-primary shadow-[0_0_18px_rgba(25,184,242,0.45)]"
+                  style={{ width: `${skill.level}%` }}
                 />
-              ) : (
-                <item.Icon
-                  className={`w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 group-hover:scale-110 transition-transform duration-300 ${item.color}`}
-                />
-              )}
-              <span className="text-xs transition-opacity duration-300 opacity-0 md:text-sm font-Montserrat dark:text-gray-300 group-hover:opacity-100">
-                {item.alt}
-              </span>
+              </div>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto mt-10 flex max-w-7xl flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span
+            key={tool}
+            className="rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1.5 text-xs font-semibold text-dark-text-secondary"
+          >
+            {tool}
+          </span>
+        ))}
       </div>
     </div>
   );

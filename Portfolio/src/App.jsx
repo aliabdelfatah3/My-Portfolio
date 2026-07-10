@@ -43,32 +43,32 @@ function App() {
         <div
           className="pointer-events-none fixed inset-0 z-10 hidden md:block"
           style={{
-            background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(147, 51, 234, 0.05), transparent 40%)`,
+            background: `radial-gradient(560px circle at ${mousePos.x}px ${mousePos.y}px, rgba(25, 184, 242, 0.08), transparent 42%)`,
           }}
         />
 
         <NavBar />
 
-        <main className="flex flex-col space-y-24 pb-24 pt-20">
-          <section id="home">
+        <main className="flex flex-col pb-24 pt-20">
+          <section id="home" data-od-id="section-home">
             <Home />
           </section>
-          <section id="about">
+          <section id="about" data-od-id="section-about">
             <AboutMe />
           </section>
-          <section id="skills">
+          <section id="skills" data-od-id="section-skills">
             <Skills />
           </section>
-          <section id="experience">
+          <section id="experience" data-od-id="section-experience">
             <Experience />
           </section>
-          <section id="education">
+          <section id="education" data-od-id="section-education">
             <Education />
           </section>
-          <section id="projects">
+          <section id="projects" data-od-id="section-projects">
             <Projects />
           </section>
-          <section id="contact-me">
+          <section id="contact-me" data-od-id="section-contact">
             <ContactMe />
           </section>
         </main>
