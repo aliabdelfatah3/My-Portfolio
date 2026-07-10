@@ -19,7 +19,7 @@ const BackToTop = () => {
     <button
       onClick={scrollToTop}
       aria-label="Back to top"
-      className="fixed bottom-8 right-6 z-50 group"
+      className="group fixed bottom-8 right-6 z-50"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0) scale(1)" : "translateY(20px) scale(0.8)",
@@ -27,13 +27,9 @@ const BackToTop = () => {
         transition: "opacity 0.3s ease, transform 0.3s ease",
       }}
     >
-      <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary shadow-lg shadow-accent-primary/30 group-hover:shadow-accent-primary/60 group-hover:scale-110 transition-all duration-300">
-        {/* Code-themed icon: upward chevron styled as < / > */}
-        <span className="text-white font-mono font-bold text-lg leading-none select-none">
-          ↑
-        </span>
-        {/* Pulse ring animation */}
-        <span className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary opacity-40 group-hover:opacity-0 animate-ping" />
+      <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-accent-primary text-[#021014] shadow-lg shadow-accent-primary/30 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent-secondary">
+        <span className="font-mono text-lg font-bold leading-none">^</span>
+        <span className="absolute inset-0 rounded-full bg-accent-primary opacity-30 group-hover:opacity-0 animate-ping" />
       </div>
     </button>
   );

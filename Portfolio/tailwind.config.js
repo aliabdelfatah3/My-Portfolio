@@ -9,25 +9,25 @@ export default {
         syne: ["Syne", "sans-serif"],
       },
       colors: {
-        // Premium Light Mode Palette
-        "light-bg": "#F8FAFC", // Off-white/slate for a crisp look
+        // Screenshot-matched light palette
+        "light-bg": "#F4FAFB",
         "light-card": "#FFFFFF",
-        "light-text-primary": "#0F172A", // Deep slate/charcoal
-        "light-text-secondary": "#475569",
-        "light-border": "#E2E8F0",
+        "light-text-primary": "#071417",
+        "light-text-secondary": "#4D6670",
+        "light-border": "#D9EAEE",
         
-        // Premium Dark Mode Palette
-        "dark-bg": "#0B0F19", // Deep midnight blue/black
-        "dark-card": "#111827",
-        "dark-card-hover": "#1F2937",
-        "dark-text-primary": "#F8FAFC",
-        "dark-text-secondary": "#94A3B8",
-        "dark-border": "#1E293B",
+        // Screenshot-matched dark palette
+        "dark-bg": "#030B0E",
+        "dark-card": "#071820",
+        "dark-card-hover": "#0D2430",
+        "dark-text-primary": "#F2FBFD",
+        "dark-text-secondary": "#8DB6C3",
+        "dark-border": "#12313C",
 
-        // Accent Colors (Gradients & Highlights)
-        "accent-primary": "#3B82F6", // Vibrant Blue
-        "accent-secondary": "#8B5CF6", // Vibrant Purple
-        "accent-tertiary": "#EC4899", // Vibrant Pink
+        // Accent colors from the attached reference
+        "accent-primary": "#19B8F2",
+        "accent-secondary": "#27D5C4",
+        "accent-tertiary": "#F0B84A",
       },
       animation: {
         fadeIn: "fadeIn 0.8s ease-out forwards",
@@ -55,8 +55,8 @@ export default {
           "50%": { transform: "translateY(-15px)" },
         },
         pulseGlow: {
-          "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 10px rgba(139, 92, 246, 0.5))" },
-          "50%": { opacity: ".5", filter: "drop-shadow(0 0 20px rgba(139, 92, 246, 0.8))" },
+          "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 10px rgba(25, 184, 242, 0.35))" },
+          "50%": { opacity: ".55", filter: "drop-shadow(0 0 20px rgba(39, 213, 196, 0.45))" },
         },
         gradientX: {
           "0%, 100%": {
@@ -70,7 +70,7 @@ export default {
         },
       },
       backgroundImage: {
-        'premium-gradient': 'linear-gradient(to right, #3B82F6, #8B5CF6, #EC4899)',
+        "premium-gradient": "linear-gradient(135deg, #19B8F2, #27D5C4)",
       }
     },
   },

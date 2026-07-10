@@ -1,8 +1,27 @@
-# React + Vite
+# Ali Abdelfattah Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio for Ali Abdelfattah, a Front-End Developer focused on React, Angular, TypeScript, Tailwind CSS, API integration, and clean UI engineering.
 
-Currently, two official plugins are available:
+## Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern React and Vite setup
+- Tailwind CSS styling with dark and light theme support
+- Sections for about, skills, experience, education, projects, and contact
+- Responsive layout optimized for desktop and mobile
+- Public project links and contact brief helper
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Icons
+- JavaScript
+
+## Scripts
+
+```bash
+npm run start
+npm run build
+npm run lint
+```

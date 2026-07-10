@@ -1,125 +1,127 @@
-import { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
+import { FaGithub, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import About_Pic from "./Pic/About_Pic.png";
 
-const STATS = [
-  { label: "Years of Experience", value: 1, suffix: "+" },
-  { label: "Projects Completed", value: 4, suffix: "+" },
-  { label: "Technologies", value: 15, suffix: "+" },
-  { label: "Cups of Tea", value: 99, suffix: "+" },
+const contactTiles = [
+  {
+    label: "Location",
+    value: "Egypt",
+    icon: FaMapMarkerAlt,
+  },
+  {
+    label: "GitHub",
+    value: "aliabdelfatah3",
+    href: "https://github.com/aliabdelfatah3",
+    icon: FaGithub,
+  },
+  {
+    label: "LinkedIn",
+    value: "Ali Abdelfattah",
+    href: "https://www.linkedin.com/in/ali-abdelfattah-866b91198/",
+    icon: FaLinkedinIn,
+  },
 ];
 
-function useCountUp(target, duration = 1500, start = false) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!start) return;
-    let startTime = null;
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      // Ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [start, target, duration]);
-
-  return count;
-}
-
-function StatCard({ stat, started }) {
-  const count = useCountUp(stat.value, 1500, started);
-  return (
-    <div className="flex flex-col items-center gap-1 group">
-      <span className="text-3xl md:text-4xl font-bold font-syne text-gradient tabular-nums">
-        {count}{stat.suffix}
-      </span>
-      <span className="text-sm md:text-base text-light-text-secondary dark:text-dark-text-secondary font-inter text-center leading-tight">
-        {stat.label}
-      </span>
-    </div>
-  );
-}
-
-StatCard.propTypes = {
-  stat: PropTypes.shape({
-    value: PropTypes.number.isRequired,
-    suffix: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-  }).isRequired,
-  started: PropTypes.bool.isRequired,
-};
+const capabilities = [
+  "Responsive HTML, CSS, and JavaScript interfaces",
+  "React.js with Zustand, Redux, and API integration",
+  "Angular development with RxJS fundamentals",
+  "Tailwind CSS, Git workflows, and reusable components",
+];
 
 function AboutMe() {
-  const statsRef = useRef(null);
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const node = statsRef.current;
-    if (!node) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStarted(true);
-          observer.unobserve(node);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="flex flex-col justify-center gap-10 text-center px-4 md:px-12 max-w-7xl mx-auto pt-20">
-      <div className="flex flex-col gap-12 items-center">
-        <h1 className="text-3xl md:text-5xl font-syne font-bold text-accent-primary dark:text-accent-secondary tracking-tight">
-          About Me
-        </h1>
-
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 w-full">
-          {/* Image Container */}
-          <div className="relative group flex-shrink-0">
-            <div className="absolute inset-0 bg-accent-primary dark:bg-accent-secondary rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-            <img
-              className="relative object-cover w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl shadow-2xl ring-1 ring-light-border dark:ring-dark-border z-10"
-              src={About_Pic}
-              alt="Ali Abdelfattah"
-            />
-          </div>
-
-          {/* Text Container */}
-          <div className="lg:max-w-2xl w-full text-left flex flex-col items-start gap-8">
-            <p className="font-inter text-base md:text-lg lg:text-xl leading-relaxed text-light-text-secondary dark:text-dark-text-secondary">
-              I am a passionate <span className="font-semibold text-light-text-primary dark:text-dark-text-primary">Frontend Developer</span> proficient in modern web technologies including HTML, CSS, JavaScript, TypeScript, React.js (Zustand), and Angular (RxJS). 
-              <br/><br/>
-              Skilled in building user-focused, responsive, and highly scalable web applications, I leverage powerful styling tools like TailwindCSS to craft visually stunning interfaces. Experienced in version control with Git, I am dedicated to delivering clean, maintainable code and innovative solutions that optimize performance, enhance the user experience, and drive business success.
+    <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-24 sm:px-8 lg:grid-cols-[0.86fr_1.14fr] lg:px-12">
+      <div className="relative">
+        <div className="absolute -inset-4 rounded-[2rem] bg-accent-primary/10 blur-3xl" />
+        <div className="relative overflow-hidden rounded-[1.5rem] border border-dark-border bg-dark-card p-3 shadow-[0_30px_70px_rgba(0,0,0,0.28)]">
+          <img
+            className="h-[29rem] w-full rounded-[1.1rem] object-cover object-top"
+            src={About_Pic}
+            alt="Frontend engineer profile"
+          />
+          <div className="absolute bottom-6 right-6 rounded-2xl border border-accent-primary/25 bg-accent-primary px-5 py-4 text-[#021014] shadow-[0_20px_45px_rgba(25,184,242,0.25)]">
+            <p className="font-syne text-3xl font-bold leading-none">1+</p>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em]">
+              year experience
             </p>
-
-            {/* Stats Row */}
-            <div
-              ref={statsRef}
-              className="w-full grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 px-4 rounded-2xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border shadow-inner"
-            >
-              {STATS.map((stat) => (
-                <StatCard key={stat.label} stat={stat} started={started} />
-              ))}
-            </div>
-
-            <div className="flex justify-center lg:justify-start w-full">
-              <a
-                href="https://drive.google.com/file/d/1Q_jxi9DdfEGVa5khvBb6ZNVBHzxHohao/view?usp=drive_link"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 text-sm font-semibold text-white transition-all duration-300 bg-light-text-primary hover:bg-accent-primary dark:bg-dark-card-hover dark:hover:bg-accent-secondary rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Download Resume
-              </a>
-            </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col justify-center">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.12em] text-accent-primary">
+          About me
+        </p>
+        <h2 className="font-syne text-4xl font-bold leading-tight tracking-[-0.025em] text-light-text-primary dark:text-dark-text-primary sm:text-5xl">
+          I build responsive interfaces that are clear, fast, and easy to maintain.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-8 text-light-text-secondary dark:text-dark-text-secondary sm:text-lg">
+          I am a Front-End Developer focused on turning designs and product
+          requirements into polished web experiences. My work combines HTML,
+          CSS, JavaScript, TypeScript, React.js, Angular, Tailwind CSS, API
+          integration, and Git-based workflows, with attention to performance,
+          usability, and reusable code.
+        </p>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          {capabilities.map((capability) => (
+            <div
+              key={capability}
+              className="flex items-center gap-3 rounded-2xl border border-dark-border bg-dark-card/75 px-4 py-3 text-sm font-semibold text-dark-text-primary"
+            >
+              <span className="h-2 w-2 rounded-full bg-accent-secondary shadow-[0_0_16px_rgba(39,213,196,0.6)]" />
+              {capability}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          {contactTiles.map(({ label, value, href, icon: Icon }) => {
+            const inner = (
+              <>
+                <Icon className="text-accent-primary" aria-hidden="true" />
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.09em] text-dark-text-secondary">
+                    {label}
+                  </p>
+                  <p className="mt-1 flex items-center gap-1 text-sm font-semibold text-dark-text-primary">
+                    {value}
+                    {href && <FiExternalLink className="h-3.5 w-3.5" aria-hidden="true" />}
+                  </p>
+                </div>
+              </>
+            );
+
+            return href ? (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-h-20 items-center gap-3 rounded-2xl border border-dark-border bg-dark-card px-4 transition hover:-translate-y-0.5 hover:border-accent-primary/55"
+              >
+                {inner}
+              </a>
+            ) : (
+              <div
+                key={label}
+                className="flex min-h-20 items-center gap-3 rounded-2xl border border-dark-border bg-dark-card px-4"
+              >
+                {inner}
+              </div>
+            );
+          })}
+        </div>
+
+        <a
+          href="https://drive.google.com/file/d/1Q_jxi9DdfEGVa5khvBb6ZNVBHzxHohao/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 inline-flex min-h-12 w-fit items-center justify-center rounded-full bg-accent-primary px-6 text-sm font-bold text-[#021014] transition hover:-translate-y-0.5 hover:bg-accent-secondary"
+        >
+          Download resume
+        </a>
       </div>
     </div>
   );

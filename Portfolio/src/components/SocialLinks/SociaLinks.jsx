@@ -1,40 +1,26 @@
-import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"; // Import LinkedIn and GitHub icons
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function SocialLinks() {
   return (
-    <div className="flex flex-col gap-5">
-      <div className="pl-10">
-        <h1 className="text-black text-left font-eb-garamond text-lg dark:text-white">
-          Links:
-        </h1>
-      </div>
-      <div className="flex gap-20 pl-32">
-        <a
-          href="https://www.linkedin.com/in/ali-abdelfattah-3looloo-866b91198"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 text-3xl"
-        >
-          <FaLinkedin />
-        </a>
-
-        <a
-          href="https://github.com/aliabdelfatah3"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-800 text-3xl dark:text-white dark:bg-gray-800 dark:rounded-full"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://wa.me/+201115455211"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-green-600 text-3xl dark:text-green-400"
-        >
-          <FaWhatsapp />
-        </a>
-      </div>
+    <div className="flex gap-3">
+      <a
+        href="https://www.linkedin.com/in/ali-abdelfattah-866b91198/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ali Abdelfattah on LinkedIn"
+        className="grid h-10 w-10 place-items-center rounded-full border border-dark-border bg-dark-card text-dark-text-primary transition hover:border-accent-primary/50 hover:text-accent-primary"
+      >
+        <FaLinkedin />
+      </a>
+      <a
+        href="https://github.com/aliabdelfatah3"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ali Abdelfattah on GitHub"
+        className="grid h-10 w-10 place-items-center rounded-full border border-dark-border bg-dark-card text-dark-text-primary transition hover:border-accent-primary/50 hover:text-accent-primary"
+      >
+        <FaGithub />
+      </a>
     </div>
   );
 }
